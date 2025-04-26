@@ -258,12 +258,10 @@ Complete Exercise 15 in the space below:
 
 let total = 0;
 
-const newArr = numArrays.flat(Infinity);
-
-for(i = 0; i < newArr.length; i++){
-    total += newArr[i];
+for(let i = 0; i < numArrays.length; i++){
+   for(let k = 0; k < numArrays[i].length; k++){
+      total += numArrays[i][k];
+   }
 }
 
-console.log('Exercise 15 result:\n', total);
-
-// I couldn't figure out how to do it by using nested loops or forEach() methods, so I flattened the array and summed it that way
+console.log('Exercise 15 result:', total);
